@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>//判断两个数组是否符合规律
+function come(arr1,arr2)
+{
+	if(arr1.length!=arr2.length)
+		return false;
+	var arr=[];
+	arr[0]=arr1[arr1.length-1]*arr1[arr1.length-1];
+	for(var i=0;i<arr1.length-1;i++)
+	{
+		arr[i+1]=arr1[i]*arr1[i];
+	}
+	for(var i in arr2)
+	{
+		if(arr[i]!=arr2[i])
+		{
+			return false;
+		}
+	}
+	return true;
+	
+}
+come([1,2,3,4],[16,1,4,9]);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+var a=["112","344444","abecc","aeee"];
+var b=["1223334444555","abeeaadddd","adfasfas"];
+function come(a,b)
+{
+	var max=b[0];
+	for(var i in b)
+	{
+		if(b[i].length>max.length)
+			max=b[i];
+	}
+	var cha=0;
+	for(var j in a)
+	{
+		if(max.length-a[j].length>cha)
+			cha=max.length-a[j].length;
+	}
+	return [max,cha]
+}
+come(a,b);
+</script>
+</head>
+<body>
+</body>
+</html>

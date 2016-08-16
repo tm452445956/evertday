@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>//计算b里的数在a里出现的次数。
+var a=["aba","zxy","aba","zz"];
+var b=["aba","zxy","bb"];
+function come(a,b)
+{
+	var arr=[];
+	for(var j in b)
+	{
+		var count=0;
+		for(var i in a)
+		{
+			if(b[j]==a[i])
+				count++;
+		}
+		arr.push(count);
+	}
+		return arr;
+}
+come(a,b);
+</script>
+</head>
+<body>
+</body>
+</html>
