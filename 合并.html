@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+var a=[1,3,6,21,22];
+var b=[4,7,9,11,13,15];
+function come(arr1,arr2)
+{
+    var arr=[];
+    while(arr1.length!=0||arr2.length!=0)
+    {
+        if(arr1.length==0)
+        {  
+            arr.push(arr2[0]);
+            arr2.splice(0,1);
+        }
+        if(arr2.length==0)
+        {
+            arr.push(arr1[0]);
+            arr1.splice(0,1);            
+        }
+        if(arr2.length!=0&&arr1.length!=0)
+        { 
+            if(arr1[0]>arr2[0])
+            {
+                arr.push(arr2[0]);
+                arr2.splice(0,1);
+            }
+            else
+            {
+                arr.push(arr1[0]);
+                arr1.splice(0,1);
+            }
+        }
+    }
+    return arr;
+}
+console.log(come(a,b));
+</script>
+</head>
+<body>
+</body>
+</html>

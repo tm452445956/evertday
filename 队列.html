@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+<script>
+function Queue()
+{
+    this.arr = [];
+    this.enqueue = function(x)
+    {
+        this.arr.push(x);
+    }
+    this.dequeue = function()
+    {
+        return this.arr.splice(0,1)[0];
+    }
+    this.peek = function ()
+    {
+        return this.arr[0];
+    }
+}
+var q = new Queue();
+q.enqueue(8);
+q.enqueue(2);
+q.enqueue(3);
+q.dequeue(); //8
+q.dequeue(); //2
+q.dequeue(); //3
+</script>
+</head>
+<body>
+</body>
+</html>
