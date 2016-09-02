@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+function Capital(arr)
+{
+    var arr1=[];
+    for(var i in arr)
+    {
+        if("ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr[i])!=-1)
+            arr1.push(i);
+    }
+    return arr1;
+}
+Capital('CodeWArs');//[0,4,5]
+</script>
+</head>
+<body>
+</body>
+</html>

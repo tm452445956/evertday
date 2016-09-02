@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function come(n)
+{
+    var arr=[];
+    var arr1=[];
+    for(var i=0;i<100;i++)
+    {
+        if(i%2==1)
+        arr1.push(i);
+    }
+    for(var j=1;j<=n;j++)
+    {
+        var arr2=[];  
+        for(var y=0;y<j;y++)
+        {
+            arr2.push(arr1[y]);
+        }
+        arr1.splice(0,j);
+        arr.push(arr2);
+    }
+    return sum(arr[n-1]);
+}
+function sum(arr)
+{
+    var s=0;
+    for(var i in arr)
+    {
+        s=s+arr[i];
+    }
+    return s;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

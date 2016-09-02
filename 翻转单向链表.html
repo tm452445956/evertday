@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+function Node(x)
+{
+    this.data=x;
+    this.next = null;
+}
+function createLink()
+{
+    var m = new Node(1);
+    var n = new Node(2);
+    var o = new Node(3);
+    m.next = n;
+    n.next = o;
+    return m;
+}
+function reverseLinkList(n)
+{
+    var arr=[];
+    do
+    {
+        arr.push(n.data);
+        n=n.next;
+    }
+    while(n!=null)
+    arr.reverse();
+    var arr1=[];
+    for(var i=0;i<arr.length;i++)
+    {
+        arr1[i]=new Node(arr[i]);
+    }
+    for(var j=0;j<arr1.length-1;j++)
+    {
+        arr1[j].next=arr1[j+1];
+    }
+    return arr1[0];
+}
+
+var ll = createLink();
+var mm = reverseLinkList(ll);
+
+</script>
+</head>
+<body>
+</body>
+</html>
